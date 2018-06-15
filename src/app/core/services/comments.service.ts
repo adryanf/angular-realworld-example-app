@@ -10,7 +10,9 @@ import { map } from 'rxjs/operators/map';
 export class CommentsService {
   constructor (
     private apiService: ApiService
-  ) {}
+  ) {
+    console.log('=========> CommentsService Created');
+  }
 
   add(slug, payload): Observable<Comment> {
     return this.apiService

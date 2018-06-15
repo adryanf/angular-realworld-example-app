@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { ArticleListComponent, ArticleMetaComponent, ArticlePreviewComponent } from './article-helpers';
 import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
+import { InitCapsPipe } from './pipes';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
 
@@ -23,6 +24,7 @@ import { ShowAuthedDirective } from './show-authed.directive';
     ArticlePreviewComponent,
     FavoriteButtonComponent,
     FollowButtonComponent,
+    InitCapsPipe,
     ListErrorsComponent,
     ShowAuthedDirective
   ],
@@ -33,6 +35,7 @@ import { ShowAuthedDirective } from './show-authed.directive';
     CommonModule,
     FavoriteButtonComponent,
     FollowButtonComponent,
+    InitCapsPipe,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

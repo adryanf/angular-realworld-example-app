@@ -13,7 +13,8 @@ import {
 
 @Component({
   selector: 'app-article-page',
-  templateUrl: './article.component.html'
+  templateUrl: './article.component.html',
+  // providers: [CommentsService]
 })
 export class ArticleComponent implements OnInit {
   article: Article;
@@ -34,6 +35,15 @@ export class ArticleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    let routeParams = this.route.snapshot.params;
+
+    console.log('Snapshot params: '+ JSON.stringify(routeParams));
+
+    this.route.params.subscribe(params => {
+      console.log('Observable params: ' + params['slug']);
+    });
+
     // Retreive the prefetched article
     this.route.data.subscribe(
       (data: { article: Article }) => {
